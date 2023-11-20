@@ -72,6 +72,11 @@ pipeline{
                }
             }
         }
+        stage('Upload Binaries to Jfrog Artifactory') {
+            steps {
+                echo 'This is jfrog Stage'
+            }
+        }
         stage('Docker Image Build'){
          when { expression {  params.action == 'create' } }
             steps{
