@@ -73,9 +73,12 @@ pipeline{
                }
             }
         }
-        stage('Upload Binaries to Jfrog Artifactory') {
+        stage('Push JAR to JFrog : python') {
+           when{ expression { params.action == 'create' } }
             steps {
-                echo 'This is jfrog Stage'
+                Script{
+                    jarPush()
+                }
             }
         }
         stage('Docker Image Build'){
