@@ -34,10 +34,11 @@ def mvnBuild():
     except subprocess.CalledProcessError as e:
         print(f"Error: Maven build failed with exit code {e.returncode}")        
         
-def main():
+'''def main():
     # mvnbuildi()
     jfrogUpload()
 
 ################################################################################################
 if __name__ == "__main__":
     main()
+'''
